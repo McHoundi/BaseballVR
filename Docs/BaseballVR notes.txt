@@ -1,0 +1,26 @@
+8.1. TODO:
+negate body collision with bat
+center player collider on headset, not playspace
+make a target
+
+9.1. TODO:
+make hitting with the bat more consistent, don't allow it to 'skip' positions
+add a score manager
+
+10.1. TODO:
+smoothness of object movement
+optimization of hitting (make bat collider larger or more flat?)
+a basic game mode
+
+###Notable stuff###
+
+Custom layers:
+Added 2 custom layers, Player collider and Equipment.
+Player collider holds the playercontroller, and balls' and the bat's layers are set to equipment.
+These two layers are then configured to not collide with each other in the Physics project settings.
+
+Rigidbody collision detection:
+The collision detection mode for the bat and balls is set to continuos dynamic, instead of the default discrete. This way, the bat doesn't 'skip' the ball if hit too fast.
+
+Interpolation:
+Rigidbodies of balls and bat are set to interpolate. This makes movement seem smoother.
