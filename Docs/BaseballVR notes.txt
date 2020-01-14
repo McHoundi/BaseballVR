@@ -14,6 +14,9 @@ a basic game mode
 
 ###Notable stuff###
 
+OVR Grabber:
+Changed code according to suggenstions found on this forum page: https://forum.unity.com/threads/vr-oculus-sdk-touch-controller-snap-position-snap-offset-grab-a-gun.512853/
+
 Custom layers:
 Added 2 custom layers, Player collider and Equipment.
 Player collider holds the playercontroller, and balls' and the bat's layers are set to equipment.
