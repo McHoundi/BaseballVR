@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DebugManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshPro debugText;
+    
+    [SerializeField]
+    private Text xAxisBoostSliderText;
+
+    //Sliders
+    [SerializeField]
+    private Slider xAxisBoostSlider;
 
     void Start()
     {
@@ -25,5 +33,9 @@ public class DebugManager : MonoBehaviour
         debugText.SetText("Ballvelocity " + time + "\n" + "X: " + x.ToString("F2") + "\n" + "Y: " + y.ToString("F2") + "\n" + "Z: " + z.ToString("F2"));
     }
 
+    public void setXAxisBoostSliderText()
+    {
+        xAxisBoostSliderText.text = "X-axis boost: " + xAxisBoostSlider.value.ToString("F2");
+    }
 
 }

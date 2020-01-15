@@ -1,12 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BatContact : MonoBehaviour
 {
     Rigidbody ballRB;
-    private DebugManager debugManager ;
+    private DebugManager debugManager;
     private float exitTime;
+    
+    private float xAxisBoost = 3;
+
+    //Sliders
+    [SerializeField]
+    private Slider xAxisBoostSlider;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,9 +43,14 @@ public class BatContact : MonoBehaviour
             if ( ballRB.velocity.y > 0 )
             {
                 // give the ball some power to the x direction (toward goals)
-                ballRB.velocity.Set(ballRB.velocity.x * 3, ballRB.velocity.y, ballRB.velocity.z);
+                ballRB.velocity.Set(ballRB.velocity.x * xAxisBoost, ballRB.velocity.y, ballRB.velocity.z);
                 
             }
         } 
+    }
+
+    public void SetXAxisBoost()
+    {
+        xAxisBoost = xAxisBoostSlider.value;
     }
 }
