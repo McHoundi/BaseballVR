@@ -39,13 +39,11 @@ public class BatContact : MonoBehaviour
         {
             exitTime = 0.0f;
             ballRB = collision.gameObject.GetComponent<Rigidbody>();
-            
-            if ( ballRB.velocity.y > 0 )
-            {
-                // give the ball some power to the x direction (toward goals)
-                ballRB.velocity.Set(ballRB.velocity.x * xAxisBoost, ballRB.velocity.y, ballRB.velocity.z);
+           
+            // give the ball some power to the x direction (toward goals)
+            ballRB.velocity.Set(ballRB.velocity.x * xAxisBoost, ballRB.velocity.y, ballRB.velocity.z);
                 
-            }
+            
         } 
     }
 
