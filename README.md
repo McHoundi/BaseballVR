@@ -1,4 +1,4 @@
-Short demo fo the game: https://youtu.be/njGt9py4_Dg
+Short demo of the game: https://youtu.be/njGt9py4_Dg
 
 Scripts made by me found in Assets/Scripts folder
 
